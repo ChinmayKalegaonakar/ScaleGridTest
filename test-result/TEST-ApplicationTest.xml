@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="1" time="0.153" errors="1" skipped="0" tests="0" name="ApplicationTest">
+  <testcase classname="ApplicationTest" name="testThatIndexPageWorks" time="0.147">
+                        <error type="" message="A java.lang.RuntimeException has been caught, java.util.concurrent.ExecutionException: play.exceptions.TemplateExecutionException: Cannot get property &amp;apos;emailAlertOffset&amp;apos; on null object">
+        <![CDATA[
+          In /test/ApplicationTest.java, line 13
+          
+                      Response response = GET(&quot;/&quot;); :
+          
+        ]]>
+        </error>
+                  <system-err>
+            java.lang.RuntimeException: java.util.concurrent.ExecutionException: play.exceptions.TemplateExecutionException: Cannot get property &apos;emailAlertOffset&apos; on null object
+	at play.test.FunctionalTest.makeRequest(FunctionalTest.java:299)
+	at play.test.FunctionalTest.makeRequest(FunctionalTest.java:305)
+	at play.test.FunctionalTest.GET(FunctionalTest.java:103)
+	at play.test.FunctionalTest.GET(FunctionalTest.java:57)
+	at ApplicationTest.testThatIndexPageWorks(ApplicationTest.java:13)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at play.test.PlayJUnitRunner$StartPlay$2$1.evaluate(PlayJUnitRunner.java:105)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at play.test.PlayJUnitRunner.run(PlayJUnitRunner.java:55)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:24)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:157)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:136)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:117)
+	at play.test.TestEngine.run(TestEngine.java:112)
+	at controllers.TestRunner.run(TestRunner.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at play.server.PlayHandler$NettyInvocation.execute(PlayHandler.java:257)
+	at play.Invoker$Invocation.run(Invoker.java:278)
+	at play.server.PlayHandler$NettyInvocation.run(PlayHandler.java:235)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.util.concurrent.ExecutionException: play.exceptions.TemplateExecutionException: Cannot get property &apos;emailAlertOffset&apos; on null object
+	at java.util.concurrent.FutureTask.report(Unknown Source)
+	at java.util.concurrent.FutureTask.get(Unknown Source)
+	at play.test.FunctionalTest.makeRequest(FunctionalTest.java:286)
+	... 55 more
+Caused by: play.exceptions.TemplateExecutionException: Cannot get property &apos;emailAlertOffset&apos; on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:86)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:257)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.&lt;init&gt;(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at play.test.FunctionalTest$1.execute(FunctionalTest.java:269)
+	at play.Invoker$Invocation.run(Invoker.java:278)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	... 3 more
+Caused by: java.lang.NullPointerException: Cannot get property &apos;emailAlertOffset&apos; on null object
+	at /app/views/Application/index.html.(line:78)
+	at play.templates.JavaExtensions.toString(JavaExtensions.java:76)
+	at play.templates.FastTags._form(FastTags.java:124)
+	at play.templates.FastTags$_form.call(Unknown Source)
+	at /app/views/Application/index.html.(line:75)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:232)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.&lt;init&gt;(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Application.index(Application.java:22)
+	... 12 more
+
+          </system-err>  
+        }
+            </testcase>
+  <testcase classname="ApplicationTest" name="cronDateShifting" time="0.006">
+                  <failure type="" message="Failure, expected:&lt;1&gt; but was:&lt;2&gt;">
+        <![CDATA[
+          In /test/ApplicationTest.java, line 28
+          
+                      assertEquals(1 , MailingCache.count()); :
+          
+        ]]>
+        </failure>
+        }
+                  </testcase>
+</testsuite>

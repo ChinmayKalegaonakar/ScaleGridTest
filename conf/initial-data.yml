@@ -1,0 +1,32 @@
+## YAML Template.
+User(chinmay):
+    name:           chinmay
+    email:          chinmay@gmail.com
+    password:       secret
+    birthday:       25/04/1997
+    
+Contact(chinmay0):
+    name: chinmay16
+    email: chinmay@gmail.com
+    timezone: IST
+    birthday: 1997-05-16 9:42:00
+    user: chinmay
+    
+Contact(chinmay1):
+    name: chinmay17
+    email: chinmay@gmail.com
+    timezone: IST
+    birthday: 1997-05-15 9:37:00
+    user: chinmay
+    
+Contact(chinmay2):
+    name: chinmay1
+    email: chinmay@gmail.com
+    timezone: ist
+    birthday: 1997-04-25
+    
+Preferences(chinmay):
+    timezone: IST
+    startTime: 0800
+    emailAlertOffset: 0
+    user: chinmay

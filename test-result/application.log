@@ -1,0 +1,33 @@
+16 May 2021 10:53:59,095 INFO  ~ Starting C:\Users\kaleg\Documents\Github\ScaleGridApp
+16 May 2021 10:53:59,101 INFO  ~ Module crud is available (C:\Users\kaleg\Documents\libs\play-1.2.4\modules\crud)
+16 May 2021 10:53:59,101 INFO  ~ Module secure is available (C:\Users\kaleg\Documents\libs\play-1.2.4\modules\secure)
+16 May 2021 10:53:59,651 WARN  ~ You're running Play! in DEV mode
+16 May 2021 10:53:59,744 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 May 2021 10:54:06,961 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+16 May 2021 10:54:07,805 INFO  ~ Application 'ScaleGridApp' is now started !
+16 May 2021 10:58:30,942 ERROR ~ 
+
+@7jlm0p6km
+Error during job execution (EmailCronJob)
+
+Execution exception (In /app/EmailCronJob.java around line 35)
+ClassCastException occured : models.MailingCache cannot be cast to models.MailingCache
+
+play.exceptions.JavaExecutionException: models.MailingCache cannot be cast to models.MailingCache
+	at play.jobs.Job.call(Job.java:155)
+	at Invocation.Job(Play!)
+Caused by: java.lang.ClassCastException: models.MailingCache cannot be cast to models.MailingCache
+	at EmailCronJob.checkForPendingMails(EmailCronJob.java:35)
+	at EmailCronJob.doJob(EmailCronJob.java:29)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+16 May 2021 10:59:31,008 INFO  ~ From Mock Mailer
+	New email received by
+	From: ScaleGridApp@gmail.com
+	ReplyTo: ScaleGridApp@gmail.com
+	To: "chinmay@gmail.com" <chinmay@gmail.com>
+	Subject: Upcoming Birthdays
+	text/plain; charset=us-ascii: You contact chinmay16 has their birthday soon , wish them at chinmay@gmail.com 
+	
+

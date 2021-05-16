@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<testsuite failures="1" time="0.019" errors="0" skipped="0" tests="3" name="BasicTest">
+  <testcase classname="BasicTest" name="cronjobcheck" time="0.013">
+      </testcase>
+  <testcase classname="BasicTest" name="usersCheck" time="0.002">
+      </testcase>
+  <testcase classname="BasicTest" name="contactsCheck" time="0.001">
+                  <failure type="" message="Failure, expected:&lt;chinma[]2@gmail.com&gt; but was:&lt;chinma[y]2@gmail.com&gt;">
+        <![CDATA[
+          In /test/BasicTest.java, line 33
+          
+                      assertEquals(&quot;chinma2@gmail.com&quot; , retrived.getEmail()); :
+          
+        ]]>
+        </failure>
+        }
+                  </testcase>
+  <testcase classname="BasicTest" name="checkDateNotEqual" time="0.003">
+      </testcase>
+</testsuite>
